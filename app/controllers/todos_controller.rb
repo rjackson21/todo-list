@@ -26,7 +26,7 @@ class TodosController < ApplicationController
 
   private
   def todo_params
-    params.require(:todo).permit(:content, :complete)
+    params.require(:todo).permit(:content, :title)
   end
 
 
