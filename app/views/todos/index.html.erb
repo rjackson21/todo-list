@@ -1,0 +1,22 @@
+<h1>"User's" To-Do List </h1>
+
+<%= form_tag url: "/todo", method: :post do |form| %>
+  <%= text_field_tag :content, nil, autofocus: true%>
+  <%= submit_tag "Submit" %>
+<% end %> 
+
+
+
+<ul>
+  <% @todos.each do |todo| %>
+    <li>
+      <a href="/todo/<%= todo.id %>">
+        <%= @todo.content %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+
+
+
