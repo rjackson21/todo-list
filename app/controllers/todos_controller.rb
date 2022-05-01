@@ -18,7 +18,7 @@ class TodosController < ApplicationController
    # @todo.complete = params[:complete]
 
     if @todo.save
-      redirect_to @todo
+      redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end
