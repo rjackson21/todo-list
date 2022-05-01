@@ -2,13 +2,13 @@
 
 <%= form_for @todo_new do |form | %>
   <div>
-    <%= form.label :content %><br>
-    <%= form.text_field :content %>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
   </div>
 
   <div>
-    <%= form.label :complete %><br>
-    <%= form.text_area :complete %>
+    <%= form.label :content%><br>
+    <%= form.text_area :content %>
   </div>
 
   <div>
@@ -26,8 +26,8 @@
   <tbody>
   <% @todos.each do |todo| %>
     <tr>
+      <td><%= todo.title%></td>
       <td><%= todo.content%></td>
-      <td><%= todo.complete%></td>
     </tr>
   <% end %>
   </tbody>
