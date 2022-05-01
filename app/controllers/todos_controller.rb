@@ -24,6 +24,13 @@ class TodosController < ApplicationController
     end
   end
 
+  def show
+    @todo = Todo.find(params[:id])
+  end
+
+  def delete 
+  end
+
   private
   def todo_params
     params.require(:todo).permit(:content, :title)
