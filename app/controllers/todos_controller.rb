@@ -2,6 +2,7 @@ class TodosController < ApplicationController
   def index
     @todos = Todo.all
     @todo = Todo.last
+    @todo_new = Todo.new
 
   end
 
